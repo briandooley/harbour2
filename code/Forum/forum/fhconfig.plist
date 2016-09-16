@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist>
+<dict>
+  <key>host</key>
+  <string>https://harbourfront.us.evals.redhatmobile.com</string>
+  <key>appid</key>
+  <string>uafv6fh4rfunqwfupmjv5bsl</string>
+  <key>projectid</key>
+  <string>uafv6fhh347bfbttijp7dowp</string>
+  <key>appkey</key>
+  <string>d76204b1a161ebf173f9589eef6841774fa081ea</string>
+  <key>connectiontag</key>
+  <string>0.0.12</string>
+</dict>
+</plist>

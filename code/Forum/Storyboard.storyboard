@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="INTR____.ttf">
+            <string>Interstate-Regular</string>
+        </mutableArray>
+        <mutableArray key="Overpass-Bold.ttf">
+            <string>Overpass-Bold</string>
+            <string>Overpass-Bold</string>
+            <string>Overpass-Bold</string>
+            <string>Overpass-Bold</string>
+        </mutableArray>
+        <mutableArray key="Overpass-Light.ttf">
+            <string>Overpass-Light</string>
+            <string>Overpass-Light</string>
+            <string>Overpass-Light</string>
+            <string>Overpass-Light</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--View Controller Quiz-->
+        <scene sceneID="eEO-c2-sVR">
+            <objects>
+                <viewController storyboardIdentifier="ViewControllerQuiz" id="1cA-hw-Lzo" customClass="ViewControllerQuiz" customModule="forum" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ijn-Ly-QGs"/>
+                        <viewControllerLayoutGuide type="bottom" id="pc3-P4-lEh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aLq-wC-jsg" userLabel="MainView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="MSf-jM-bof">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event quiz - Who are you? " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J64-jl-fh5">
+                                <rect key="frame" x="60" y="100" width="480" height="22"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Overpass-Light" family="Overpass" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0G2-Xq-ccX">
+                                <rect key="frame" x="60" y="139" width="480" height="32"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="4bZ-P3-uec"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Overpass-Bold" family="Overpass" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="M9A-iO-0Kr">
+                                <rect key="frame" x="60" y="191" width="480" height="389"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RedHatIcon" translatesAutoresizingMaskIntoConstraints="NO" id="xFS-Pe-hg7">
+                                <rect key="frame" x="417" y="20" width="163" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="163" id="gKy-JA-J9q"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="J64-jl-fh5" firstAttribute="centerX" secondItem="aLq-wC-jsg" secondAttribute="centerX" id="3l1-Ah-Jfd"/>
+                            <constraint firstItem="M9A-iO-0Kr" firstAttribute="centerX" secondItem="aLq-wC-jsg" secondAttribute="centerX" id="BrC-RO-5wm"/>
+                            <constraint firstItem="J64-jl-fh5" firstAttribute="width" secondItem="aLq-wC-jsg" secondAttribute="width" multiplier="4:5" id="ERV-gw-7eL"/>
+                            <constraint firstItem="0G2-Xq-ccX" firstAttribute="centerX" secondItem="aLq-wC-jsg" secondAttribute="centerX" id="FDj-zK-Q4n"/>
+                            <constraint firstItem="MSf-jM-bof" firstAttribute="centerX" secondItem="aLq-wC-jsg" secondAttribute="centerX" id="VNL-7l-zJm"/>
+                            <constraint firstItem="xFS-Pe-hg7" firstAttribute="height" secondItem="aLq-wC-jsg" secondAttribute="height" multiplier="1:11" id="YNw-FN-aHU"/>
+                            <constraint firstItem="M9A-iO-0Kr" firstAttribute="leading" secondItem="J64-jl-fh5" secondAttribute="leading" id="Ygc-fM-ojf"/>
+                            <constraint firstItem="0G2-Xq-ccX" firstAttribute="leading" secondItem="J64-jl-fh5" secondAttribute="leading" id="bWl-eG-lK7"/>
+                            <constraint firstItem="M9A-iO-0Kr" firstAttribute="centerX" secondItem="aLq-wC-jsg" secondAttribute="centerX" id="fio-zf-kt8"/>
+                            <constraint firstItem="0G2-Xq-ccX" firstAttribute="top" secondItem="J64-jl-fh5" secondAttribute="bottom" constant="17" id="hLd-D7-G2c"/>
+                            <constraint firstItem="0G2-Xq-ccX" firstAttribute="width" secondItem="aLq-wC-jsg" secondAttribute="width" multiplier="3:5" id="ipw-JO-76F"/>
+                            <constraint firstItem="MSf-jM-bof" firstAttribute="width" secondItem="aLq-wC-jsg" secondAttribute="width" id="k3D-Ct-cn0"/>
+                            <constraint firstItem="M9A-iO-0Kr" firstAttribute="top" secondItem="0G2-Xq-ccX" secondAttribute="bottom" constant="20" id="ksk-Jr-BnN"/>
+                            <constraint firstItem="pc3-P4-lEh" firstAttribute="top" secondItem="M9A-iO-0Kr" secondAttribute="bottom" constant="20" id="m2e-uv-CGS"/>
+                            <constraint firstItem="xFS-Pe-hg7" firstAttribute="top" secondItem="ijn-Ly-QGs" secondAttribute="bottom" id="oEX-sx-jc8"/>
+                            <constraint firstItem="MSf-jM-bof" firstAttribute="height" secondItem="aLq-wC-jsg" secondAttribute="height" id="uVz-Hn-hA6"/>
+                            <constraint firstItem="MSf-jM-bof" firstAttribute="centerY" secondItem="aLq-wC-jsg" secondAttribute="centerY" id="wuK-8j-V9u"/>
+                            <constraint firstItem="J64-jl-fh5" firstAttribute="top" secondItem="xFS-Pe-hg7" secondAttribute="bottom" constant="25" id="ygV-fx-yaq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xFS-Pe-hg7" secondAttribute="trailing" id="zTb-2h-uLD"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ipw-JO-76F"/>
+                                <exclude reference="BrC-RO-5wm"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="labelQuestion" destination="0G2-Xq-ccX" id="j7z-JS-gEc"/>
+                        <outlet property="labelTitle" destination="J64-jl-fh5" id="TEk-zp-CZg"/>
+                        <outlet property="tableViewAnswers" destination="M9A-iO-0Kr" id="HM3-4J-SR8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2hr-p4-apb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-852" y="-764"/>
+        </scene>
+        <!--View Controller Login-->
+        <scene sceneID="I62-09-0Bs">
+            <objects>
+                <viewController storyboardIdentifier="ViewControllerLogin" id="boq-Zn-udE" customClass="ViewControllerLogin" customModule="forum" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Crp-ko-q5y"/>
+                        <viewControllerLayoutGuide type="bottom" id="pZ9-DQ-bQQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EU8-Dr-OPB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="yE6-HD-YfP" customClass="background">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fak-5O-UoP">
+                                <rect key="frame" x="60" y="262" width="480" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="EfX-62-bqg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wn-VD-XP3">
+                                <rect key="frame" x="60" y="94" width="480" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="K7H-di-4ae"/>
+                                </constraints>
+                                <string key="text">Welcome to 
+Red Hat Forum</string>
+                                <fontDescription key="fontDescription" name="Overpass-Bold" family="Overpass" pointSize="26"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RedHatIcon" translatesAutoresizingMaskIntoConstraints="NO" id="yLB-Nc-V6Y">
+                                <rect key="frame" x="417" y="20" width="163" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="163" id="Eek-E2-mXI"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgx-hi-iGv">
+                                <rect key="frame" x="465" y="297" width="75" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="PLT-BM-j2A"/>
+                                    <constraint firstAttribute="width" constant="75" id="iv0-Xa-eXm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Interstate-Regular" family="Interstate-Regular" pointSize="14"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="LOG IN ►">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tablButtonLogin:" destination="boq-Zn-udE" eventType="touchUpInside" id="g5v-am-Oz4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0H-vv-toA">
+                                <rect key="frame" x="60" y="377" width="428" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Overpass-Light" family="Overpass" pointSize="14"/>
+                                <state key="normal" title="I agree to the Terms and Conditions"/>
+                                <connections>
+                                    <action selector="tapTermsCondition:" destination="boq-Zn-udE" eventType="touchUpInside" id="zOC-97-aC4"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aaa-f8-vCK">
+                                <rect key="frame" x="491" y="376" width="51" height="31"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleAspectFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCq-nw-Ky1">
+                                <rect key="frame" x="470" y="540" width="120" height="60"/>
+                                <state key="normal" title="Button" image="hf_logga_till_redhat"/>
+                                <connections>
+                                    <action selector="tapButtonHarbourFront:" destination="boq-Zn-udE" eventType="touchUpInside" id="sNs-nZ-QEW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2wn-VD-XP3" firstAttribute="top" secondItem="Crp-ko-q5y" secondAttribute="bottom" constant="74" id="273-CU-wNa"/>
+                            <constraint firstItem="R0H-vv-toA" firstAttribute="leading" secondItem="fak-5O-UoP" secondAttribute="leading" id="3JA-Xf-tFc"/>
+                            <constraint firstItem="2wn-VD-XP3" firstAttribute="leading" secondItem="fak-5O-UoP" secondAttribute="leading" id="3jL-I2-dxk"/>
+                            <constraint firstItem="Aaa-f8-vCK" firstAttribute="baseline" secondItem="R0H-vv-toA" secondAttribute="baseline" id="3k1-t4-7hy"/>
+                            <constraint firstItem="pZ9-DQ-bQQ" firstAttribute="top" secondItem="pCq-nw-Ky1" secondAttribute="bottom" id="7fr-Rl-rzY"/>
+                            <constraint firstItem="fak-5O-UoP" firstAttribute="top" secondItem="2wn-VD-XP3" secondAttribute="bottom" constant="69" id="BQP-9U-1B4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yLB-Nc-V6Y" secondAttribute="trailing" id="F9L-HS-Edx"/>
+                            <constraint firstItem="yE6-HD-YfP" firstAttribute="centerY" secondItem="EU8-Dr-OPB" secondAttribute="centerY" id="Fsa-53-4MF"/>
+                            <constraint firstItem="Aaa-f8-vCK" firstAttribute="trailing" secondItem="lgx-hi-iGv" secondAttribute="trailing" id="GXX-7j-Mi6"/>
+                            <constraint firstItem="R0H-vv-toA" firstAttribute="top" secondItem="lgx-hi-iGv" secondAttribute="bottom" constant="50" id="Hn0-kp-raF"/>
+                            <constraint firstItem="fak-5O-UoP" firstAttribute="width" secondItem="2wn-VD-XP3" secondAttribute="width" id="ITW-8f-XJf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pCq-nw-Ky1" secondAttribute="trailing" constant="-10" id="ITv-c6-27v"/>
+                            <constraint firstItem="fak-5O-UoP" firstAttribute="leading" secondItem="yE6-HD-YfP" secondAttribute="leading" id="PUj-bN-5Ud"/>
+                            <constraint firstItem="lgx-hi-iGv" firstAttribute="trailing" secondItem="fak-5O-UoP" secondAttribute="trailing" id="WwW-65-clQ"/>
+                            <constraint firstItem="Aaa-f8-vCK" firstAttribute="bottom" secondItem="R0H-vv-toA" secondAttribute="bottom" id="XhY-S5-Zic"/>
+                            <constraint firstItem="yE6-HD-YfP" firstAttribute="width" secondItem="EU8-Dr-OPB" secondAttribute="width" id="Y6k-tr-Wr2"/>
+                            <constraint firstItem="lgx-hi-iGv" firstAttribute="trailing" secondItem="fak-5O-UoP" secondAttribute="trailing" id="YC5-9S-19Y"/>
+                            <constraint firstItem="yE6-HD-YfP" firstAttribute="centerX" secondItem="EU8-Dr-OPB" secondAttribute="centerX" id="Yty-7z-Gde"/>
+                            <constraint firstItem="pCq-nw-Ky1" firstAttribute="width" secondItem="EU8-Dr-OPB" secondAttribute="width" multiplier="1:5" id="ZTU-0N-f8B"/>
+                            <constraint firstItem="Aaa-f8-vCK" firstAttribute="leading" secondItem="R0H-vv-toA" secondAttribute="trailing" constant="3" id="aUS-Zp-gzW"/>
+                            <constraint firstItem="2wn-VD-XP3" firstAttribute="width" secondItem="EU8-Dr-OPB" secondAttribute="width" multiplier="4:5" id="aVR-OB-WDU"/>
+                            <constraint firstItem="yE6-HD-YfP" firstAttribute="height" secondItem="EU8-Dr-OPB" secondAttribute="height" id="dID-9n-FMA"/>
+                            <constraint firstItem="fak-5O-UoP" firstAttribute="centerX" secondItem="EU8-Dr-OPB" secondAttribute="centerX" id="hk4-XD-xDE"/>
+                            <constraint firstItem="R0H-vv-toA" firstAttribute="top" secondItem="fak-5O-UoP" secondAttribute="bottom" constant="45" id="jBd-dI-IQl"/>
+                            <constraint firstItem="lgx-hi-iGv" firstAttribute="top" secondItem="yE6-HD-YfP" secondAttribute="bottom" constant="-303" id="lTT-37-te9"/>
+                            <constraint firstItem="yLB-Nc-V6Y" firstAttribute="top" secondItem="Crp-ko-q5y" secondAttribute="bottom" id="nKE-2c-f2y"/>
+                            <constraint firstItem="pCq-nw-Ky1" firstAttribute="height" secondItem="EU8-Dr-OPB" secondAttribute="height" multiplier="1:10" id="qiq-7A-uLV"/>
+                            <constraint firstItem="yLB-Nc-V6Y" firstAttribute="height" secondItem="EU8-Dr-OPB" secondAttribute="height" multiplier="1:11" id="vdv-4d-Ky7"/>
+                            <constraint firstItem="lgx-hi-iGv" firstAttribute="top" secondItem="fak-5O-UoP" secondAttribute="bottom" constant="5" id="xoy-W6-n5p"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="PUj-bN-5Ud"/>
+                                <exclude reference="jBd-dI-IQl"/>
+                                <exclude reference="WwW-65-clQ"/>
+                                <exclude reference="lTT-37-te9"/>
+                                <exclude reference="3k1-t4-7hy"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="buttonLogin" destination="lgx-hi-iGv" id="BR2-qm-env"/>
+                        <outlet property="labelEmail" destination="fak-5O-UoP" id="fIo-3E-Bnd"/>
+                        <outlet property="switchTermsConditions" destination="Aaa-f8-vCK" id="kpi-qb-vhU"/>
+                        <outlet property="termsConditionsButton" destination="R0H-vv-toA" id="IdK-Hf-Jz4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QCj-ZD-9QJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1515" y="-764"/>
+        </scene>
+        <!--Terms and conditions-->
+        <scene sceneID="2Aj-hh-B5D">
+            <objects>
+                <viewController storyboardIdentifier="ViewControllerTermsCondition" title="Terms and conditions" id="Wno-GR-a96" customClass="ViewControllerTermsConditions" customModule="forum" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TTZ-4g-E6t"/>
+                        <viewControllerLayoutGuide type="bottom" id="xn3-U0-BRE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6EG-ia-AD0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="rlz-EV-yDt">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mNP-ad-SAg">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Terms And Conditions" id="zJh-yA-Cmv">
+                                        <barButtonItem key="leftBarButtonItem" title="Close" id="kxF-1v-98w">
+                                            <connections>
+                                                <action selector="tapBackButton:" destination="Wno-GR-a96" id="VKw-KZ-N1E"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PGI-mQ-Au0">
+                                <rect key="frame" x="0.0" y="44" width="600" height="556"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Last Updated: September 6,  2016
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">RED HAT FORUM APPLICATION  PRIVACY STATEMENT 
+SCOPE OF THIS PRIVACY STATEMENT
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="8" paragraphSpacingBefore="17" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Red Hat, Inc. and its affiliated companies and subsidiaries (collectively, “Red Hat”) respect your privacy. This Privacy Statement applies to personal information collected by Red Hat through the Red Hat Forum Application (our “App”). This Privacy Statement does not apply to other websites, applications, products, or services offered or sponsored by Red Hat. Such offerings have their own privacy statements, which we encourage you to review.
+
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">THE PERSONAL INFORMATION WE COLLECT
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="8" paragraphSpacingBefore="17" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Red Hat collects personal information directly from you when you interact with us through our App, including, without limitation, when you:
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">	•	Create a user account (individual or corporate email address);
+	•	Respond to the questionnaire defining your give away; and
+	•	Respond to the Red Hat Master competition app.
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="8" headIndent="36" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="11">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="natural" location="36">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">To the extent permitted by applicable law, the types of personal information collected directly from you may include, without limitation:
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">	•	Information used to communicate with you, such as name, title, company name, email address, telephone number, postal address and language; 
+	•	Information that Red Hat maintains in association with your account, such as your username and password; 
+	•	Information that will define your give away after completing the “who are you” questionnaire; and
+	•	Information on actions you’ve taken during the event in order to give you points for your activity and let you compete against others. The only information collected is what you have inserted into the “Red Hat Master” app.
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="8" headIndent="36" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="11">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="natural" location="36">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">HOW WE USE YOUR PERSONAL INFORMATION
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="8" paragraphSpacingBefore="17" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Red Hat uses personal information in an effort to enhance your experience at the Red Hat Forum. In particular, based on the information you give us through the App, you may become eligible for gifts or prizes.  
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="8" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">We will not use your personal information in a manner that is inconsistent with the purpose of its original collection, unless you have consented.
+
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">HOW WE SHARE YOUR PERSONAL INFORMATION
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="8" paragraphSpacingBefore="17" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Except as described in this Privacy Statement, Red Hat will not sell, rent or lease your personal information to others without your consent.
+Red Hat may share personal information with business partners and service providers in order to store and access the data during the event. These business partners and service providers include, for example, information technology service providers. Service providers are required by contract to keep the information received on behalf of Red Hat confidential and secure and not use it for any purpose other than the purpose for which it was provided to them.
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">AUTOMATICALLY COLLECTED INFORMATION 
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="8" paragraphSpacingBefore="17" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Device Information
+Red Hat may collect information from or about the phones or other device where you install or access our App, including your unique device identifier or other information (such as information used to remember your preferences in our App). We may associate the information collected across your different devices, which helps us provide more consistent service and experience across your devices. 
+
+Location Information
+Red Hat may obtain information about your physical location, such as by use of GPS and other geolocation features in your device, or by inference from other information we collect (for example, your IP address indicates the general geographic region from which you are connecting to the Internet). Red Hat may use this information to improve the usage experience of the app. We aim to obtain appropriate consent (where required under applicable law) to collect and process your location data.
+
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">YOUR RIGHTS AND CHOICES
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="8" paragraphSpacingBefore="17" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">In accordance with the laws of certain countries, you may have certain rights and choices regarding the personal information we collect and maintain about you, and how we communicate with you.
+Subject to applicable law, you may have the right to request access to and receive information about the personal information we maintain about you, update or correct inaccuracies in the information we maintain about you, and have the information blocked or deleted, as appropriate.  Your rights to the information we maintain about you may be limited under local law.  You also have the right to object to the processing of your information or to withdraw your consent to our processing of information about you.  
+Note, however, that if you exercise your right to object or your rights of blocking or deletion, if you decline to share certain information with us, or if you withdraw your consent to our processing of information about you, we may not be able to provide to you some of the features and functionalities of the Service.
+You may contact Red Hat per email at nordics@redhat.com to make changes to your information, such as your password and your contact information.
+
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">SECURITY
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="8" paragraphSpacingBefore="17" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Red Hat intends to protect your personal information. We have implemented appropriate physical, administrative and technical safeguards to help us protect your personal information from unauthorized access, use and disclosure. For example, we encrypt certain personal information when we transmit such information over the Internet. We also require that our business partners and service providers protect such information from unauthorized access, use and disclosure.
+
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">DATA TRANSFERS AND SAFE HARBOR FRAMEWORK
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="8" paragraphSpacingBefore="17" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Red Hat is a global organization, with legal entities, business processes, and technical systems that operate across borders. Red Hat may transfer your personal information to other Red Hat entities in the United States and elsewhere. The United States and other countries may not have the same data protection laws as the country from which you initially provided the information. By accessing the Service, registering for an account, or otherwise providing Red Hat with your personal information, you consent to this transfer of your personal information. When transferring your personal information internationally, Red Hat will protect your personal information as provided in this Privacy Statement.
+If you are located in the European Economic Area (“EEA”) or Switzerland, we comply with applicable legal requirements providing adequate protection for the transfer of personal information to countries outside of the EEA or Switzerland. Red Hat has self-certified its adherence to the U.S.-EU  and U.S. - Swiss Safe Harbor Frameworks as set forth by the United States Department of Commerce regarding the collection, storage, use, transfer and other processing of personal information from the EEA or Switzerland to the United States. Click here to review our Safe Harbor Privacy Statement. Due to the invalidation of the EU-U.S. Safe Harbor Framework by the European Court of Justice on October 6, 2015, Red Hat relies on other data transfer mechanisms, but continues to abide by and certify to the Safe Harbor Principles. You can learn more about the Safe Harbor framework, and view Red Hat’s certification by visiting the United States Department of Commerce Safe Harbor website.
+
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">CHANGES TO THIS PRIVACY STATEMENT
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="8" paragraphSpacingBefore="17" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Red Hat reserves the right to make corrections, changes or amendments to this Privacy Statement at any time. The revised Privacy Statement will be posted on the Service. A notice will be made through the Service or via the contact information you provided us whenever this Privacy Statement is changed in a material way, and the date of last update will be indicated at the top of the Privacy Statement. If you do not refuse the changes in writing within that notice period, this shall mean that you have consented to the Privacy Statement as changed, including with respect to personal information provided to us prior to the changes in the Privacy Statement. We encourage you to periodically review this Privacy Statement for any changes or updates.
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">HOW TO CONTACT US
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="8" paragraphSpacingBefore="17" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">If you have any questions about Red Hat’s privacy practices or use of your personal information, please feel free to contact us via our Feedback Form or by mail at:
+Red Hat, Inc.
+Corporate Legal Group
+100 East Davie Street
+Raleigh, North Carolina 27601
+United States
+
+If you are located in the European Economic Area, the entity responsible for the collection, use, and processing of your information described in this Privacy Statement is Red Hat Limited.
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="light"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mNP-ad-SAg" firstAttribute="width" secondItem="6EG-ia-AD0" secondAttribute="width" id="492-hI-Ojf"/>
+                            <constraint firstItem="PGI-mQ-Au0" firstAttribute="top" secondItem="mNP-ad-SAg" secondAttribute="bottom" id="BZ4-J9-aKy"/>
+                            <constraint firstItem="mNP-ad-SAg" firstAttribute="top" secondItem="TTZ-4g-E6t" secondAttribute="bottom" constant="-20" id="D9t-5d-54O"/>
+                            <constraint firstItem="mNP-ad-SAg" firstAttribute="trailing" secondItem="rlz-EV-yDt" secondAttribute="trailing" id="DQo-YE-DJR"/>
+                            <constraint firstItem="rlz-EV-yDt" firstAttribute="height" secondItem="6EG-ia-AD0" secondAttribute="height" id="MGT-Rz-q8f"/>
+                            <constraint firstItem="rlz-EV-yDt" firstAttribute="centerY" secondItem="6EG-ia-AD0" secondAttribute="centerY" id="XkA-en-tlW"/>
+                            <constraint firstItem="PGI-mQ-Au0" firstAttribute="centerX" secondItem="rlz-EV-yDt" secondAttribute="centerX" id="YLk-th-RXP"/>
+                            <constraint firstItem="rlz-EV-yDt" firstAttribute="width" secondItem="6EG-ia-AD0" secondAttribute="width" id="cc9-Qm-xuJ"/>
+                            <constraint firstItem="PGI-mQ-Au0" firstAttribute="centerY" secondItem="rlz-EV-yDt" secondAttribute="centerY" id="eFo-6J-gnf"/>
+                            <constraint firstItem="mNP-ad-SAg" firstAttribute="leading" secondItem="PGI-mQ-Au0" secondAttribute="leading" id="hye-D7-4Hl"/>
+                            <constraint firstItem="PGI-mQ-Au0" firstAttribute="width" secondItem="rlz-EV-yDt" secondAttribute="width" id="iVM-xW-Ene"/>
+                            <constraint firstItem="mNP-ad-SAg" firstAttribute="centerX" secondItem="6EG-ia-AD0" secondAttribute="centerX" id="u35-aR-gXh"/>
+                            <constraint firstItem="rlz-EV-yDt" firstAttribute="centerX" secondItem="6EG-ia-AD0" secondAttribute="centerX" id="xMZ-sJ-nsf"/>
+                            <constraint firstItem="xn3-U0-BRE" firstAttribute="top" secondItem="PGI-mQ-Au0" secondAttribute="bottom" id="zjS-aq-5NY"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="YLk-th-RXP"/>
+                                <exclude reference="eFo-6J-gnf"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="navigationBar" destination="mNP-ad-SAg" id="ood-tt-Nl6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="epe-CE-8vM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1515" y="19"/>
+        </scene>
+        <!--View Controller Agenda-->
+        <scene sceneID="LsJ-Nw-b8I">
+            <objects>
+                <viewController storyboardIdentifier="ViewControllerAgenda" id="dNg-PK-dbI" customClass="ViewControllerAgenda" customModule="forum" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ba5-PE-nKh"/>
+                        <viewControllerLayoutGuide type="bottom" id="evq-Td-6rh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ztg-JN-Ter">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="9Rr-1i-5a5">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RedHatIcon" translatesAutoresizingMaskIntoConstraints="NO" id="z5y-Kh-SIP">
+                                <rect key="frame" x="417" y="20" width="163" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="163" id="C2J-Rc-m7f"/>
+                                </constraints>
+                            </imageView>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ppz-yU-JPa">
+                                <rect key="frame" x="15" y="15" width="570" height="570"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ppz-yU-JPa" firstAttribute="width" secondItem="9Rr-1i-5a5" secondAttribute="width" multiplier="19:20" id="1fe-Gb-78h"/>
+                            <constraint firstItem="Ppz-yU-JPa" firstAttribute="height" secondItem="9Rr-1i-5a5" secondAttribute="height" multiplier="19:20" id="6gH-Sd-IZK"/>
+                            <constraint firstItem="9Rr-1i-5a5" firstAttribute="height" secondItem="ztg-JN-Ter" secondAttribute="height" id="9F7-2q-WNv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="z5y-Kh-SIP" secondAttribute="trailing" id="A4e-NK-Uqk"/>
+                            <constraint firstItem="9Rr-1i-5a5" firstAttribute="centerX" secondItem="ztg-JN-Ter" secondAttribute="centerX" id="LBj-YV-z1z"/>
+                            <constraint firstItem="z5y-Kh-SIP" firstAttribute="top" secondItem="ba5-PE-nKh" secondAttribute="bottom" id="Mxw-Th-Qz2"/>
+                            <constraint firstItem="Ppz-yU-JPa" firstAttribute="centerX" secondItem="ztg-JN-Ter" secondAttribute="centerX" id="Zpx-8X-ywk"/>
+                            <constraint firstItem="9Rr-1i-5a5" firstAttribute="width" secondItem="ztg-JN-Ter" secondAttribute="width" id="atl-g7-qn4"/>
+                            <constraint firstItem="9Rr-1i-5a5" firstAttribute="centerY" secondItem="ztg-JN-Ter" secondAttribute="centerY" id="mFM-YK-LHu"/>
+                            <constraint firstItem="z5y-Kh-SIP" firstAttribute="height" secondItem="ztg-JN-Ter" secondAttribute="height" multiplier="1:11" id="ueT-An-k8h"/>
+                            <constraint firstItem="Ppz-yU-JPa" firstAttribute="centerY" secondItem="ztg-JN-Ter" secondAttribute="centerY" id="xyd-KL-1vE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="Ppz-yU-JPa" id="5YK-OF-b2W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xai-Nd-hU4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1644" y="845"/>
+        </scene>
+        <!--View Controller Profile-->
+        <scene sceneID="ecg-fF-eDN">
+            <objects>
+                <viewController storyboardIdentifier="ViewControllerProfile" id="acf-8I-WDY" customClass="ViewControllerProfile" customModule="forum" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fWn-kU-hvi"/>
+                        <viewControllerLayoutGuide type="bottom" id="dSs-Q7-bwD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u4K-0D-EwA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="vFa-Vf-2Ww">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQe-3C-egG">
+                                <rect key="frame" x="120" y="83" width="360" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="EjP-0w-7qq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Overpass-Bold" family="Overpass" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show your profile at the registration desk and you will recieve your give away" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Fq-l3-no0">
+                                <rect key="frame" x="60" y="468" width="480" height="106"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="106" id="JuM-Di-bmW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Overpass-Light" family="Overpass" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RedHatIcon" translatesAutoresizingMaskIntoConstraints="NO" id="P8L-zP-4fT">
+                                <rect key="frame" x="417" y="20" width="163" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="163" id="gOM-VR-cit"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Vl-WK-qNr">
+                                <rect key="frame" x="100" y="213" width="400" height="235"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="Zac-kW-tEX"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2Fq-l3-no0" firstAttribute="leading" secondItem="u4K-0D-EwA" secondAttribute="leadingMargin" constant="20" id="0h0-aF-JU9"/>
+                            <constraint firstItem="2Fq-l3-no0" firstAttribute="width" secondItem="u4K-0D-EwA" secondAttribute="width" multiplier="4:5" id="0tW-qa-6EV"/>
+                            <constraint firstItem="P8L-zP-4fT" firstAttribute="height" secondItem="u4K-0D-EwA" secondAttribute="height" multiplier="1:11" id="2B7-UE-J1t"/>
+                            <constraint firstItem="vFa-Vf-2Ww" firstAttribute="centerY" secondItem="u4K-0D-EwA" secondAttribute="centerY" id="3aW-kl-0gl"/>
+                            <constraint firstItem="vFa-Vf-2Ww" firstAttribute="centerX" secondItem="u4K-0D-EwA" secondAttribute="centerX" id="3ha-Pp-TOW"/>
+                            <constraint firstItem="7Vl-WK-qNr" firstAttribute="centerX" secondItem="u4K-0D-EwA" secondAttribute="centerX" id="5Bi-cH-i8i"/>
+                            <constraint firstItem="2Fq-l3-no0" firstAttribute="top" secondItem="vFa-Vf-2Ww" secondAttribute="bottom" constant="-132" id="7EL-Yg-WuT"/>
+                            <constraint firstItem="vFa-Vf-2Ww" firstAttribute="height" secondItem="u4K-0D-EwA" secondAttribute="height" id="BdP-88-pBQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Fq-l3-no0" secondAttribute="trailing" constant="277" id="FWy-gB-aub"/>
+                            <constraint firstItem="LQe-3C-egG" firstAttribute="width" secondItem="vFa-Vf-2Ww" secondAttribute="width" multiplier="3:5" id="IAF-ZF-Dwd"/>
+                            <constraint firstItem="2Fq-l3-no0" firstAttribute="centerX" secondItem="u4K-0D-EwA" secondAttribute="centerX" id="KAw-gO-LaU"/>
+                            <constraint firstItem="LQe-3C-egG" firstAttribute="centerX" secondItem="u4K-0D-EwA" secondAttribute="centerX" id="Lwi-6i-CHR"/>
+                            <constraint firstItem="P8L-zP-4fT" firstAttribute="top" secondItem="fWn-kU-hvi" secondAttribute="bottom" id="RQ7-DN-SZL"/>
+                            <constraint firstItem="vFa-Vf-2Ww" firstAttribute="width" secondItem="u4K-0D-EwA" secondAttribute="width" id="RnH-IC-Wpk"/>
+                            <constraint firstItem="2Fq-l3-no0" firstAttribute="top" secondItem="7Vl-WK-qNr" secondAttribute="bottom" constant="20" id="cvT-6C-VSb"/>
+                            <constraint firstItem="LQe-3C-egG" firstAttribute="top" secondItem="P8L-zP-4fT" secondAttribute="bottom" constant="8" id="q8J-BY-zJx"/>
+                            <constraint firstItem="7Vl-WK-qNr" firstAttribute="top" secondItem="LQe-3C-egG" secondAttribute="bottom" constant="20" id="tSH-kd-Xxf"/>
+                            <constraint firstItem="P8L-zP-4fT" firstAttribute="trailing" secondItem="u4K-0D-EwA" secondAttribute="trailingMargin" id="x7M-8k-bG2"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0h0-aF-JU9"/>
+                                <exclude reference="FWy-gB-aub"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="charachterImage" destination="7Vl-WK-qNr" id="QkC-DV-JgA"/>
+                        <outlet property="labelBottom" destination="2Fq-l3-no0" id="mTC-gQ-MNp"/>
+                        <outlet property="labelTitle" destination="LQe-3C-egG" id="e3o-Z9-SyF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="caK-UY-ilT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-988" y="865"/>
+        </scene>
+        <!--View Controller Red Had Master-->
+        <scene sceneID="R7v-6m-31C">
+            <objects>
+                <viewController storyboardIdentifier="ViewControllerRedHadMaster" id="1oY-pJ-WdM" customClass="ViewControllerRedHadMaster" customModule="forum" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nUj-lH-uRL"/>
+                        <viewControllerLayoutGuide type="bottom" id="kdy-DI-jTQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DQv-Mx-SsW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="k2w-G7-MLm">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RedHatIcon" translatesAutoresizingMaskIntoConstraints="NO" id="fDN-MJ-JGG">
+                                <rect key="frame" x="417" y="20" width="163" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="163" id="5cA-r7-31T"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="awl-xN-1Nz">
+                                <rect key="frame" x="20" y="295" width="560" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Become a Red Hat Master by collecting as many points as you can. The one and only Master will be rewarded." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Udh-Ky-Ame">
+                                <rect key="frame" x="75" y="140" width="450" height="145"/>
+                                <fontDescription key="fontDescription" name="Overpass-Light" family="Overpass" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddY-G9-Hmi">
+                                <rect key="frame" x="0.0" y="95" width="600" height="35"/>
+                                <fontDescription key="fontDescription" name="Overpass-Bold" family="Overpass" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="k2w-G7-MLm" firstAttribute="centerY" secondItem="DQv-Mx-SsW" secondAttribute="centerY" id="0qw-aB-I3i"/>
+                            <constraint firstItem="k2w-G7-MLm" firstAttribute="centerX" secondItem="DQv-Mx-SsW" secondAttribute="centerX" id="0uL-sa-gRu"/>
+                            <constraint firstItem="k2w-G7-MLm" firstAttribute="width" secondItem="DQv-Mx-SsW" secondAttribute="width" id="3sP-5b-dn7"/>
+                            <constraint firstItem="Udh-Ky-Ame" firstAttribute="centerX" secondItem="DQv-Mx-SsW" secondAttribute="centerX" id="6jH-qB-Qdg"/>
+                            <constraint firstItem="ddY-G9-Hmi" firstAttribute="top" secondItem="fDN-MJ-JGG" secondAttribute="bottom" constant="20" id="7oI-Wt-PTh"/>
+                            <constraint firstItem="k2w-G7-MLm" firstAttribute="height" secondItem="DQv-Mx-SsW" secondAttribute="height" id="8T3-Kx-s60"/>
+                            <constraint firstItem="ddY-G9-Hmi" firstAttribute="centerX" secondItem="DQv-Mx-SsW" secondAttribute="centerX" id="FAs-aY-6pN"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="awl-xN-1Nz" secondAttribute="leading" id="G7Z-F8-iv3"/>
+                            <constraint firstItem="awl-xN-1Nz" firstAttribute="top" secondItem="Udh-Ky-Ame" secondAttribute="bottom" constant="10" id="IcF-1j-7gL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fDN-MJ-JGG" secondAttribute="trailing" id="KB4-Xf-vEv"/>
+                            <constraint firstItem="kdy-DI-jTQ" firstAttribute="top" secondItem="awl-xN-1Nz" secondAttribute="bottom" constant="5" id="RhR-xt-UYd"/>
+                            <constraint firstItem="ddY-G9-Hmi" firstAttribute="width" secondItem="k2w-G7-MLm" secondAttribute="width" id="Th6-iW-Ibp"/>
+                            <constraint firstItem="fDN-MJ-JGG" firstAttribute="top" secondItem="nUj-lH-uRL" secondAttribute="bottom" id="eYI-xs-h9C"/>
+                            <constraint firstItem="Udh-Ky-Ame" firstAttribute="width" secondItem="DQv-Mx-SsW" secondAttribute="width" multiplier="3:4" id="gbE-qP-ROd"/>
+                            <constraint firstItem="fDN-MJ-JGG" firstAttribute="height" secondItem="DQv-Mx-SsW" secondAttribute="height" multiplier="1:11" id="lhq-QF-c75"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fDN-MJ-JGG" secondAttribute="trailing" id="tXz-Wv-Gq8"/>
+                            <constraint firstItem="awl-xN-1Nz" firstAttribute="centerX" secondItem="DQv-Mx-SsW" secondAttribute="centerX" id="uVg-iT-pBi"/>
+                            <constraint firstItem="awl-xN-1Nz" firstAttribute="height" secondItem="DQv-Mx-SsW" secondAttribute="height" multiplier="1:2" id="vOs-hs-1y7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="awl-xN-1Nz" secondAttribute="trailing" id="yhW-at-H6x"/>
+                            <constraint firstItem="Udh-Ky-Ame" firstAttribute="top" secondItem="ddY-G9-Hmi" secondAttribute="bottom" constant="10" id="zKk-RF-7tS"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="KB4-Xf-vEv"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="labelTitle" destination="ddY-G9-Hmi" id="olU-hX-wAM"/>
+                        <outlet property="tableView" destination="awl-xN-1Nz" id="5n0-P2-DVA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q2K-L6-0Ry" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-346" y="865"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="k7F-fK-oJd">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarController" id="sad-eV-wiV" customClass="TabBarController" customModule="forum" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="N1b-J1-hfQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RJH-VF-onN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-852" y="-82"/>
+        </scene>
+        <!--Page View Controller Quiz-->
+        <scene sceneID="PAp-Hb-y2s">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewControllerQuiz" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="pDe-cx-IXf" customClass="PageViewControllerQuiz" customModule="forum" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qrp-rJ-HLf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-852" y="-1422"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="RedHatIcon" width="451" height="145"/>
+        <image name="background" width="1360" height="2040"/>
+        <image name="hf_logga_till_redhat" width="512" height="512"/>
+    </resources>
+</document>

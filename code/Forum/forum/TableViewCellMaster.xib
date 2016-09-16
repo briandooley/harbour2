@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Overpass-Light.ttf">
+            <string>Overpass-Light</string>
+        </mutableArray>
+        <mutableArray key="Overpass-Regular.ttf">
+            <string>Overpass-Reg</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="40" id="KGk-i7-Jjw" customClass="TableViewCellMaster" customModule="forum" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="39.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bY-0q-STE">
+                        <rect key="frame" x="16" y="12" width="192" height="16"/>
+                        <fontDescription key="fontDescription" name="Overpass-Light" family="Overpass" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcz-4u-0uN">
+                        <rect key="frame" x="213" y="12" width="43" height="22"/>
+                        <fontDescription key="fontDescription" name="Overpass-Reg" family="Overpass" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="G6l-u3-R03">
+                        <rect key="frame" x="260" y="6" width="51" height="31"/>
+                        <connections>
+                            <action selector="tapSwitchCompleted:" destination="KGk-i7-Jjw" eventType="valueChanged" id="YKY-JX-2iH"/>
+                        </connections>
+                    </switch>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="mcz-4u-0uN" firstAttribute="height" secondItem="G6l-u3-R03" secondAttribute="height" id="1Jy-ah-5yk"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="G6l-u3-R03" secondAttribute="trailing" constant="3" id="30d-uX-9hJ"/>
+                    <constraint firstItem="G6l-u3-R03" firstAttribute="leading" secondItem="mcz-4u-0uN" secondAttribute="trailing" constant="4" id="75R-kG-FPl"/>
+                    <constraint firstItem="3bY-0q-STE" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="FVL-uQ-eEO"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="3bY-0q-STE" secondAttribute="bottom" constant="2" id="GBW-B2-Se2"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="3bY-0q-STE" secondAttribute="bottom" constant="4" id="QT7-hP-InM"/>
+                    <constraint firstItem="mcz-4u-0uN" firstAttribute="leading" secondItem="3bY-0q-STE" secondAttribute="trailing" constant="8" id="QhS-VV-uWL"/>
+                    <constraint firstItem="mcz-4u-0uN" firstAttribute="top" secondItem="3bY-0q-STE" secondAttribute="top" id="Se7-s8-20u"/>
+                    <constraint firstItem="3bY-0q-STE" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="3:5" id="iax-lZ-AHj"/>
+                    <constraint firstAttribute="topMargin" secondItem="3bY-0q-STE" secondAttribute="top" constant="-4" id="rcT-2b-OhU"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="3bY-0q-STE" secondAttribute="leading" constant="-8" id="vLK-XO-JF0"/>
+                    <constraint firstItem="G6l-u3-R03" firstAttribute="top" secondItem="3bY-0q-STE" secondAttribute="top" constant="-6" id="zoU-dK-LKE"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="FVL-uQ-eEO"/>
+                        <exclude reference="GBW-B2-Se2"/>
+                        <exclude reference="1Jy-ah-5yk"/>
+                        <exclude reference="QhS-VV-uWL"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="labelDescription" destination="3bY-0q-STE" id="nBd-Qs-90X"/>
+                <outlet property="labelPoints" destination="mcz-4u-0uN" id="dxv-A2-T7v"/>
+                <outlet property="switchCompleted" destination="G6l-u3-R03" id="RTG-B1-rZr"/>
+            </connections>
+            <point key="canvasLocation" x="312" y="539"/>
+        </tableViewCell>
+    </objects>
+</document>
